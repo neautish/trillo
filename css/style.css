@@ -55,6 +55,10 @@ body {
   background-size: cover;
   background-repeat: no-repeat; }
 
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-Grey-light-1); }
+
 .container {
   max-width: 120rem;
   background-color: var(--color-Grey-light-2);
