@@ -41,6 +41,9 @@ Grey dark 3: #999
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 68.75em) {
+    html {
+      font-size: 56.25%; } }
 
 body {
   font-family: 'open sans', sans-serif;
@@ -56,6 +59,11 @@ body {
   max-width: 120rem;
   background-color: var(--color-Grey-light-2);
   margin: 8rem auto; }
+  @media only screen and (max-width: 75em) {
+    .container {
+      margin: 0;
+      max-width: 100%;
+      width: 100%; } }
 
 .header {
   font-size: 1.4rem;
@@ -65,9 +73,18 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  @media only screen and (max-width: 31.25em) {
+    .header {
+      height: 11rem;
+      flex-wrap: wrap;
+      padding: 0;
+      align-content: space-around; } }
 
 .content {
   display: flex; }
+  @media only screen and (max-width: 56.25em) {
+    .content {
+      flex-direction: column; } }
 
 .sidebar {
   background-color: var(--color-Grey-dark-1);
@@ -86,6 +103,12 @@ body {
   padding: 4.5rem;
   background-color: var(--color-Grey-light-1);
   border-bottom: var(--line); }
+  @media only screen and (max-width: 56.25em) {
+    .detail {
+      padding: 2rem; } }
+  @media only screen and (max-width: 40.625em) {
+    .detail {
+      flex-direction: column; } }
 
 .description {
   background-color: #fff;
@@ -93,12 +116,23 @@ body {
   padding: 3rem;
   flex: 0 0 60%;
   margin-right: 4.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .description {
+      padding: 2rem;
+      margin-right: 2rem; } }
+  @media only screen and (max-width: 40.625em) {
+    .description {
+      margin-right: 0;
+      margin-bottom: 2rem; } }
 
 .user-reviews {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center; }
+  @media only screen and (max-width: 40.625em) {
+    .user-reviews {
+      margin-bottom: 3rem; } }
 
 .logo {
   height: 3.25rem;
@@ -109,6 +143,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center; }
+  @media only screen and (max-width: 31.25em) {
+    .search {
+      order: 1;
+      flex: 0 0 100%;
+      background-color: var(--color-Grey-light-2); } }
   .search__input {
     font-family: inherit;
     font-size: inherit;
@@ -120,6 +159,9 @@ body {
     width: 90%;
     margin-right: -3rem;
     transition: all .2s; }
+    @media only screen and (max-width: 31.25em) {
+      .search__input {
+        margin-left: -1.5rem; } }
     .search__input:focus {
       outline: none;
       width: 100%;
@@ -185,10 +227,20 @@ body {
   font-size: 1.4rem;
   list-style: none;
   margin-top: 3.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .side-nav {
+      display: flex;
+      margin-top: 0; } }
   .side-nav__item {
     position: relative; }
     .side-nav__item:not(:last-child) {
       margin-bottom: 2px; }
+      @media only screen and (max-width: 56.25em) {
+        .side-nav__item:not(:last-child) {
+          margin: 0; } }
+    @media only screen and (max-width: 56.25em) {
+      .side-nav__item {
+        flex: 1; } }
   .side-nav__item::before {
     content: "";
     position: absolute;
@@ -214,17 +266,35 @@ body {
     z-index: 10;
     display: flex;
     align-items: center; }
+    @media only screen and (max-width: 56.25em) {
+      .side-nav__link:link, .side-nav__link:visited {
+        justify-content: center; } }
+    @media only screen and (max-width: 40.625em) {
+      .side-nav__link:link, .side-nav__link:visited {
+        padding: 1.5rem 0;
+        font-size: 1.2rem; } }
+    @media only screen and (max-width: 31.25em) {
+      .side-nav__link:link, .side-nav__link:visited {
+        flex-direction: column;
+        padding: 1rem 0; } }
   .side-nav__icon {
     width: 1.75rem;
     height: 1.75rem;
     fill: currentColor;
     margin-right: 2rem; }
+    @media only screen and (max-width: 31.25em) {
+      .side-nav__icon {
+        margin-right: 0;
+        margin-bottom: .5rem; } }
 
 .legal {
   font-size: 1.2rem;
   color: var(--color-Grey-light-4);
   padding: 2.5rem;
   text-align: center; }
+  @media only screen and (max-width: 56.25em) {
+    .legal {
+      display: none; } }
 
 .gallery {
   display: flex; }
@@ -241,6 +311,10 @@ body {
     font-weight: 300;
     letter-spacing: 1px;
     padding: 1.5rem 3rem; }
+    @media only screen and (max-width: 31.25em) {
+      .overview__heading {
+        font-size: 1.7rem;
+        padding: 1.25rem 2rem; } }
   .overview__stars {
     margin-right: auto;
     display: flex; }
@@ -264,12 +338,22 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center; }
+    @media only screen and (max-width: 31.25em) {
+      .overview__rating {
+        padding: 0 1rem;
+        margin-left: 1.5rem; } }
     .overview__rating--average {
       font-size: 2.25rem;
       font-weight: 300; }
+      @media only screen and (max-width: 31.25em) {
+        .overview__rating--average {
+          font-size: 1.8rem; } }
     .overview__rating--count {
       font-size: .8rem;
       text-transform: uppercase; }
+      @media only screen and (max-width: 31.25em) {
+        .overview__rating--count {
+          font-size: .7rem; } }
 
 .btn-inline {
   border: none;
@@ -332,21 +416,23 @@ body {
       mask-size: cover; }
 
 .recommend {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: var(--color-Grey-dark-3);
   display: flex;
   align-items: center; }
   .recommend__count {
     margin-right: auto; }
+  .recommend__friends {
+    display: flex; }
   .recommend__photo {
     display: inline-block;
     box-sizing: content-box;
-    width: 4rem;
-    height: 4rem;
+    width: 3.5rem;
+    height: 3.5rem;
     border-radius: 50%;
     border: 2px solid #fff; }
     .recommend__photo:not(:last-child) {
-      margin-right: -1.8rem; }
+      margin-right: -1.5rem; }
 
 .review {
   background-color: #fff;
@@ -355,6 +441,10 @@ body {
   margin-bottom: 3.5rem;
   position: relative;
   overflow: hidden; }
+  @media only screen and (max-width: 56.25em) {
+    .review {
+      padding: 2rem;
+      margin-bottom: 2rem; } }
   .review__text {
     margin-bottom: 2rem;
     z-index: 10;
@@ -399,6 +489,9 @@ body {
     font-weight: 300;
     text-transform: uppercase;
     margin-bottom: 2.5rem; }
+    @media only screen and (max-width: 40.625em) {
+      .cta__book-now {
+        font-size: 1.4rem; } }
 
 .btn {
   font-size: 1.5rem;
